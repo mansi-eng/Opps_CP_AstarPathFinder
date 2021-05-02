@@ -11,8 +11,11 @@ class Button extends React.Component {
     this.props.onKeyPressed(this.props.text);
   }
 
+  // render() {
+  //   return <button onClick={this.onClick} className="key">{this.props.text}</button>;
+  // }
   render() {
-    return <button onClick={this.onClick} className="key">{this.props.text}</button>;
+    return <button  className="key"></button>;
   }
 }
 
