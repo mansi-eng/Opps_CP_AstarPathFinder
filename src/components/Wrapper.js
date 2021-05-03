@@ -1,7 +1,9 @@
   
 import React from "react";
+import reactDom from "react-dom";
 
 import Node from "./Node";
+
 
 class Wrapper extends React.Component {
   constructor(props){
@@ -9,20 +11,17 @@ class Wrapper extends React.Component {
     this.state = {
       count:1 ,
       start:'',
-      end:''
+      end:'',
+    //  grey: true
+      
     }
   }
-  // handleClick(){
-  //   this.setState((prevState)=>{
-  //     return {
-  //      count: prevState.count+1
-  //     }
-  //   })
-  // }
+
   handleId = (e) => {
+  //  this.setState({grey: !this.state.grey})
     this.setState((prevState)=>{
       return {
-       count: prevState.count+1
+       count: this.state.count+1
        
       }
     })
@@ -30,7 +29,8 @@ class Wrapper extends React.Component {
     if(this.state.count===1){
       this.setState((prevState)=>{
         return {
-         start:e.target.id
+         start:e.target.id.toString()
+        
          
         }
       })
@@ -38,26 +38,36 @@ class Wrapper extends React.Component {
       
     }
     if(this.state.count===2){
+      document.getElementById(this.state.start).style.background="green"
+    
       this.setState((prevState)=>{
         return {
-         end:e.target.id
+         end:e.target.id.toString()
          
         }
       })
+    
      
       
     }
+    if(this.state.count===3){
+      document.getElementById(this.state.end).style.background="red"
+
+    }
+   
     console.log("start" + this.state.start)
     console.log("end" + this.state.end)
+    
   }
   
 
   render() {
+   // let btn_class = this.state.grey ? "buttonkey" : "buttonkey2";
     
     let gridelement = [];
     for (let i = 0; i < 16; i++) {
       for(let j = 0; j < 16; j++){
-        gridelement.push(<Node key={i.toString()+ '-' + j.toString()} id={i.toString()+ '-' + j.toString()} onClick={this.handleId}/>);
+        gridelement.push(<button className="buttonkey"  key={i.toString()+ '-' + j.toString()} id={i.toString()+ '-' + j.toString()} onClick={this.handleId}/>);
       }
     }
 
