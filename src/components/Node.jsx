@@ -7,7 +7,7 @@ const Node = (props) => {
     });
 
    return (
-       <button id={props.id} className="key" onClick={props.onClick}></button>
+       <button id={props.id} className = {props.nodeType} onClick={props.onClick}></button>
    )
 
 }

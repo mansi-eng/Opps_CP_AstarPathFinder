@@ -21,6 +21,28 @@
   background: #ccc;
 }
 
+.key-start {
+  border: 1px solid #aaa;
+  border-radius: 0px;
+  padding: 20px 0px;
+  background: rgb(16, 179, 30);
+  outline: orangered;
+  margin: 0px;
+  flex: 1;
+  min-width: 50px;
+}
+
+.key-stop {
+  border: 1px solid #aaa;
+  border-radius: 0px;
+  padding: 20px 0px;
+  background: rgb(236, 34, 34);
+  outline: orangered;
+  margin: 0px;
+  flex: 1;
+  min-width: 50px;
+}
+
 .key-container{
   display: flex;
   flex-wrap: wrap;
