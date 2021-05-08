@@ -26,7 +26,7 @@
   border-radius: 0px;
   padding: 20px 0px;
   background: rgb(16, 179, 30);
-  outline: orangered;
+  outline: rgb(16, 179, 30);
   margin: 0px;
   flex: 1;
   min-width: 50px;
@@ -43,6 +43,17 @@
   min-width: 50px;
 }
 
+.key-visited {
+  border: 1px solid #aaa;
+  border-radius: 0px;
+  padding: 20px 0px;
+  background: rgb(51, 153, 255);
+  outline: rgb(51, 153, 255);
+  margin: 0px;
+  flex: 1;
+  min-width: 50px;
+}
+
 .key-container{
   display: flex;
   flex-wrap: wrap;
@@ -50,6 +61,17 @@
 
 .app-header{
   text-align: center;
+}
+
+.key-final-path {
+  border: 1px solid #aaa;
+  border-radius: 0px;
+  padding: 20px 0px;
+  background: rgb(255, 224, 51);
+  outline: rgb(255, 224, 51);
+  margin: 0px;
+  flex: 1;
+  min-width: 50px;
 }
 
 .key-path{
