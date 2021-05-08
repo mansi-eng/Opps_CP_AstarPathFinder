@@ -26,8 +26,8 @@ class Wrapper extends React.Component {
         fetch(`http://localhost:8080/api/startNodes/${this.state.nodeCounter}`, {
           method: "PUT",
           headers: {
-            'Content-Type': 'application/json;charset=UTF-8'},
-
+            'Content-Type': 'application/json;charset=UTF-8'
+          },
           body: JSON.stringify({"start" : this.state.startNode, "stop": this.state.stopNode}),
         }).then(response => console.log(response));
     }
@@ -38,7 +38,7 @@ class Wrapper extends React.Component {
   async getPath()  {
     try {
       console.log("Start node: " + this.state.startNode + "  Stop node: " + this.state.stopNode);
-    console.log("Open: " + this.state.pathState.open + "  Current node: " + this.state.pathState.currentNode);
+      console.log("Open: " + this.state.pathState.open + "  Current node: " + this.state.pathState.currentNode);
 
     var idCounter = 0;
 

@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h2 className="app-header">A-Star path Visualizer</h2>
+      <h2 className="app-header">A-Star path Visualiser</h2>
 
         <Wrapper />
       </div>
