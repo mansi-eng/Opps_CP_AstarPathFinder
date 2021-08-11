@@ -2,20 +2,25 @@ package com.pathFinder.domain;
 
 import java.util.Objects;
 import com.pathFinder.service.A_star;
+//node class 
+//here we have defined the properties of node 
+//it will have the id ,type ,g,h,and f,parent node id  with every node 
 
 public class Node implements Comparable<Node>{
 
+	//classs members of node 
 	private	String id, type, parentNodeId;
 	private Integer g;
 	private Double heuristics, f;
 	
 	
-	
+	//constructor 
 	public Node(String id) {
 		super();
 		this.id = id;
 	}
 
+	//constructor
 	public Node(String id, String type, String parentNodeId, Integer g, Double heuristics, Double f) {
 		super();
 		this.id = id;
@@ -26,12 +31,16 @@ public class Node implements Comparable<Node>{
 		this.f = f;
 	}
 	
+	
+	//calculating heuristics 
 	Double getEuclideanDist() {
 		int x1 = Integer.parseInt(this.getId().split("-", 2)[0]), y1 = Integer.parseInt(this.getId().split("-", 2)[1]), x2 = Integer.parseInt(A_star.getStopNodeId().split("-", 2)[0]) , y2 = Integer.parseInt(A_star.getStopNodeId().split("-", 2)[1]);
 		return Math.sqrt(Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2));
 	}
 
+	//calculating cost fun
 	public void calculateCost(Node n) {
+		System.out.println("function cost");
 		this.g = n.getG() + 1;
 		this.heuristics = getEuclideanDist();
 		this.f = (double)(this.g) + this.heuristics;
@@ -39,7 +48,8 @@ public class Node implements Comparable<Node>{
 	
 	@Override
 	public String toString() {
-		return "Node [id=" + id + ", type=" + type + ", g=" + g + ", heuristics=" + heuristics + ", Full Cost =" + f + ", parent=" + parentNodeId + "]";
+		//return "Node [id=" + id + ", type=" + type + ", g=" + g + ", heuristics=" + heuristics + ", Full Cost =" + f + ", parent=" + parentNodeId + "]";
+		return "Node [id=" + id + ", Full Cost =" + f+ "]";
 	}
 	
 	@Override

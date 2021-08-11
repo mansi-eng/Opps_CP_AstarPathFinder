@@ -1,4 +1,6 @@
 package com.pathFinder.service;
+//this class contain initialoze graph function to initialize the graph 
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,8 @@ import com.pathFinder.domain.Node;
 import com.pathFinder.domain.PathSearchStateJson;
 
 public abstract class PathFinder {
+	//class member
+	
 	static Integer m = 14, n = 16;
 	Node grid[][] = new Node[m][n];
 	static String startNodeId,  stopNodeId;
@@ -44,6 +48,8 @@ public abstract class PathFinder {
 			}
 		}
 	}
+	
+	//abstraxt method of algorith 
 	
 	abstract PathSearchStateJson algorithm(PathSearchStateJson state);
 	

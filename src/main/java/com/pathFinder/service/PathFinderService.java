@@ -18,8 +18,10 @@ public class PathFinderService {
 		A_star.setStopNodeId(startNodes.getStop());
 		System.out.println("M: " + (Integer.parseInt(startNodes.getStop().split("-")[0]) + 1));
 		System.out.println("N: " + (Integer.parseInt(startNodes.getStop().split("-")[1]) + 1));
-		A_star.setM(Integer.parseInt(startNodes.getStop().split("-")[0]) + 1);
-		A_star.setN(Integer.parseInt(startNodes.getStop().split("-")[1]) + 1);
+		
+		//A_star.setM(Integer.parseInt(startNodes.getStop().split("-")[0]) + 1);
+	
+	//   A_star.setN(Integer.parseInt(startNodes.getStop().split("-")[1]) + 1);
 		System.out.println("Done setting .... ");
 	}
 	

@@ -1,6 +1,9 @@
 package com.pathFinder.domain;
+//path state class of json format
+
 
 public class PathSearchStateJson {
+	//class member in string format 
 	String[] open, closed;
 	String currentNode;
 	
